@@ -1,0 +1,4 @@
+.rest-day__title {
+  margin-top: var(--xl-margin);
+  font-size: clamp(var(--md), 3vw, var(--big));
+}

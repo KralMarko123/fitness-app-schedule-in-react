@@ -1,0 +1,19 @@
+@import "./styles/Variables.css";
+
+.app-container {
+  width: 80%;
+  min-height: 100vh;
+  padding: var(--md-padding) 0em;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .app-container {
+    width: 90%;
+    padding: var(--sm-padding) 0em;
+  }
+}

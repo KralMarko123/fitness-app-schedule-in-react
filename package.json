@@ -1,0 +1,27 @@
+{
+  "name": "fitness-schedule-app",
+  "version": "1.0.0",
+  "description": "simple fitness schedule app ",
+  "scripts": {
+    "start": "react-scripts start"
+  },
+  "author": "Marko Markovikj",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "font-awesome": "^4.7.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^5.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

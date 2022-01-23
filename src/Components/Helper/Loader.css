@@ -1,0 +1,28 @@
+.loader {
+  width: 300px;
+  height: 300px;
+
+  border-radius: var(--circle-radius);
+  border: solid 10px var(--accent-dark);
+  border-top: solid 10px var(--accent-light);
+
+  animation: rotate infinite linear 1s;
+}
+
+@media (max-width: 1200px) {
+  .loader {
+    border: solid 5px var(--accent-dark);
+    border-top: solid 5px var(--accent-light);
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

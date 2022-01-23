@@ -1,0 +1,56 @@
+@import "../../styles/Variables.css";
+
+.footer {
+  width: 100%;
+  margin-top: var(--lg-margin);
+  padding: var(--md-padding);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: var(--icon);
+  letter-spacing: 2px;
+}
+
+.footer-social {
+  margin-top: var(--sm-margin);
+}
+
+.footer-social__link {
+  font-size: var(--xl);
+  color: var(--icon);
+  margin: 0 var(--md-margin);
+}
+
+.footer-social__link:hover {
+  cursor: pointer;
+}
+
+.footer-social__link:nth-child(1):hover i {
+  color: var(--fb);
+}
+
+.footer-social__link:nth-child(2):hover i {
+  background: var(--ig);
+  color: transparent;
+  background-clip: text;
+}
+.footer-social__link:nth-child(3):hover i {
+  color: var(--li);
+}
+
+.footer-social__link:nth-child(4):hover i {
+  color: var(--git);
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    font-size: var(--xs);
+  }
+
+  .footer-social__link {
+    font-size: var(--lg);
+  }
+}

@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap");
+:root {
+  /* FONT STYLES */
+  --montserrat: "Montserrat", sans-serif;
+  --oswald: "Oswald", sans-serif;
+
+  --xs: 14px;
+  --sm: 16px;
+  --md: 18px;
+  --lg: 22px;
+  --xl: 30px;
+  --xxl: 2rem;
+  --big: 3rem;
+  --huge: 5rem;
+
+  /* COLORS */
+  --main-dark: #202020;
+  --main-light: #333533;
+  --accent-dark: #141415;
+  --accent-mid: #252525;
+  --accent-light: #ffcc22;
+  --fb: #4267b2;
+  --ig: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  --li: lightblue;
+  --git: #6cc644;
+  --icon: darkgrey;
+  --white: white;
+
+  /* MARGINS & PADDINGS */
+  --xl-margin: 3rem;
+  --lg-margin: 2rem;
+  --md-margin: 1rem;
+  --sm-margin: 0.5rem;
+  --xs-margin: 0.15em;
+
+  --lg-padding: 2em;
+  --md-padding: 1em;
+  --s-padding: 0.5em;
+  --xs-padding: 0.15em;
+
+  /* LOOK */
+  --s-radius: 5px;
+  --md-radius: 10px;
+  --lg-radius: 20px;
+  --circle-radius: 50%;
+
+  /* TRANSITIONS */
+  --fast: all 0.2s ease-in-out;
+  --smooth: all 0.5s ease-in-out;
+  --slow: all 2s ease-in-out;
+
+  /* SHADOWS */
+  --card-shadow: 0px 2px 10px black;
+}

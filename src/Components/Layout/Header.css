@@ -1,0 +1,60 @@
+@import "../../styles/Variables.css";
+
+.navbar {
+  margin-bottom: var(--md-margin);
+}
+
+.navbar-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  text-transform: uppercase;
+}
+
+.navbar-list li {
+  position: relative;
+  padding: var(--xs-padding);
+  font-weight: 500;
+}
+
+.navbar-list__link.active {
+  border-bottom: solid 2px var(--accent-light);
+}
+
+.navbar-list__link::after {
+  content: attr(data-day);
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  padding: var(--xs-padding);
+  background-color: var(--accent-light);
+
+  visibility: hidden;
+  transition: var(--fast);
+}
+
+.navbar-list__link:hover {
+  cursor: pointer;
+}
+
+.navbar-list__link:hover::after {
+  color: var(--accent-dark);
+  width: 100%;
+
+  visibility: visible;
+  border-radius: 2px;
+}
+
+@media (max-width: 1200px) {
+  .navbar-list {
+    justify-content: center;
+  }
+
+  .navbar-list__link::after {
+    display: none;
+  }
+}
