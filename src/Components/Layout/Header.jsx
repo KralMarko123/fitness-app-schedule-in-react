@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useReducer } from "react";
 import "./Header.css";
 import AppContext from "../../context/app-context";
+import { appReducer, defaultAppState } from "../../context/AppProvider";
 
 const days = [
   "monday",
@@ -14,9 +15,13 @@ const days = [
 
 const Header = () => {
   const appContext = useContext(AppContext);
-
   const choseDayHandler = (day) => {
-    appContext.chooseDay(day);
+    appContext.dispatch({ type: "LOADING" });
+
+    setTimeout(
+      () => appContext.dispatch({ type: "CHANGED_DAY", dayName: day }),
+      2000
+    );
   };
 
   return (
@@ -30,7 +35,7 @@ const Header = () => {
               }`}
               key={day}
               data-day={day}
-              onClick={choseDayHandler.bind(this, day)}
+              onClick={() => choseDayHandler(day)}
             >
               {day}
             </li>
