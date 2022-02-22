@@ -1,30 +1,12 @@
-import React, { useContext, useState, useEffect } from "react";
-import AppContext from "./context/app-context";
-import "./App.css";
-import Exercises from "./Components/Exercises/Exercises";
-import Footer from "./Components/Layout/Footer";
-import Header from "./Components/Layout/Header";
-import Hero from "./Components/Layout/Hero";
+import React from "react";
 import AppProvider from "./context/AppProvider";
-import Loader from "./Components/Helper/Loader";
+import Container from "./Components/Layout/Container";
+import "./App.css";
 
-const App = () => {
-  const appContext = useContext(AppContext);
-
+const App = (props) => {
   return (
     <AppProvider>
-      <div className="app-container">
-        <Header />
-        {appContext.loading ? (
-          <Loader />
-        ) : (
-          <>
-            <Hero />
-            <Exercises />
-            <Footer />
-          </>
-        )}
-      </div>
+      <Container />
     </AppProvider>
   );
 };

@@ -16,22 +16,14 @@ const Exercises = () => {
       case "tuesday":
         setActiveExercises(appContext.lower);
         break;
-      case "wednesday":
-        setActiveExercises(null);
-        break;
       case "thursday":
         setActiveExercises(appContext.push);
         break;
       case "friday":
         setActiveExercises(appContext.pull);
         break;
-      case "saturday":
-        setActiveExercises(null);
-        break;
-      case "sunday":
-        setActiveExercises(null);
-        break;
       default:
+        setActiveExercises(null);
         break;
     }
   }, [

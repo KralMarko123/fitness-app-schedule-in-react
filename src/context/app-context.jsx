@@ -1,8 +1,8 @@
-import { createContext } from "react";
+import { React, createContext } from "react";
 
 const AppContext = createContext({
   activeDay: "",
-  loading: false,
+  loading: undefined,
   upper: [{}],
   lower: [{}],
   push: [{}],

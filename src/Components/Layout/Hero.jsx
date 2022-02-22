@@ -22,10 +22,6 @@ const Hero = () => {
         setImgSrc(lower);
         setTitlte("LOWER");
         break;
-      case "wednesday":
-        setImgSrc(rest);
-        setTitlte("REST");
-        break;
       case "thursday":
         setImgSrc(push);
         setTitlte("PUSH");
@@ -34,15 +30,9 @@ const Hero = () => {
         setImgSrc(pull);
         setTitlte("PULL");
         break;
-      case "saturday":
-        setImgSrc(rest);
-        setTitlte("REST");
-        break;
-      case "sunday":
-        setImgSrc(rest);
-        setTitlte("REST");
-        break;
       default:
+        setImgSrc(rest);
+        setTitlte("REST");
         break;
     }
   }, [appContext.activeDay]);

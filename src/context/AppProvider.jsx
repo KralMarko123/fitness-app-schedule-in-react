@@ -118,31 +118,15 @@ const appReducer = (state, action) => {
   switch (action.type) {
     case "LOADING":
       return { ...state, loading: true };
-
     case "CHANGED_DAY":
       return { ...state, activeDay: action.dayName, loading: false };
-
     default:
       return defaultAppState;
   }
 };
 
 const AppProvider = ({ children }) => {
-  const [appState, dispatchAppAction] = useReducer(appReducer, defaultAppState);
-
-  // HANDLERS
-  const changedDayHandler = (day) => {
-    dispatchAppAction({
-      type: "LOADING",
-    });
-
-    setTimeout(() => {
-      dispatchAppAction({
-        type: "CHANGED_DAY",
-        dayName: day,
-      });
-    }, 2000);
-  };
+  const [appState, dispatch] = useReducer(appReducer, defaultAppState);
 
   const appContext = {
     activeDay: appState.activeDay,
@@ -151,7 +135,7 @@ const AppProvider = ({ children }) => {
     lower: appState.lower,
     push: appState.push,
     pull: appState.pull,
-    chooseDay: changedDayHandler,
+    dispatch: dispatch,
   };
 
   return (
