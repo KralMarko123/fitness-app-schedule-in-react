@@ -1,7 +1,8 @@
-import React, { useContext, useReducer } from "react";
-import "./Header.css";
+import React, { useContext } from "react";
 import AppContext from "../../context/app-context";
 import { appReducer, defaultAppState } from "../../context/AppProvider";
+
+import "./Header.css";
 
 const days = [
   "monday",
@@ -19,7 +20,7 @@ const Header = () => {
     appContext.dispatch({ type: "LOADING" });
 
     setTimeout(
-      () => appContext.dispatch({ type: "CHANGED_DAY", dayName: day }),
+    ()=>  appContext.dispatch({ type: "CHANGED_DAY", dayName: day }),
       2000
     );
   };

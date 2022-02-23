@@ -119,10 +119,8 @@ export const appReducer = (state, action) => {
     case "LOADING":
       
       return { ...state, loading: true };
-
     case "CHANGED_DAY":
       return { ...state, activeDay: action.dayName, loading: false };
-
     default:
       return defaultAppState;
   }
